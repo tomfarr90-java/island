@@ -1,4 +1,7 @@
 package ru.javarush.entity.animal.herbivore;
 
-public class Mouse {
+public class Mouse extends Herbivore {
+    public Mouse(String icon, double startWeight) {
+        super("MOUSE", icon, startWeight);
+    }
 }

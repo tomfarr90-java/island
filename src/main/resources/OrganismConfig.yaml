@@ -1,80 +1,96 @@
 animalSettings:
   WOLF:
+    icon: "🐺"
     weight: 50.0
     maxCount: 30
     maxMove: 3
     foodNeeded: 8.0
   BOA:
+    icon: "🐍"
     weight: 15.0
     maxCount: 30
     maxMove: 1
     foodNeeded: 3.0
   FOX:
+    icon: "🦊"
     weight: 8.0
     maxCount: 30
     maxMove: 2
     foodNeeded: 2.0
   BEAR:
+    icon: "🐻"
     weight: 500.0
     maxCount: 5
     maxMove: 2
     foodNeeded: 80.0
   EAGLE:
+    icon: "🦅"
     weight: 6.0
     maxCount: 20
     maxMove: 3
     foodNeeded: 1.0
   HORSE:
+    icon: "🐎"
     weight: 400.0
     maxCount: 20
     maxMove: 4
     foodNeeded: 60.0
   DEER:
+    icon: "🦌"
     weight: 300.0
     maxCount: 20
     maxMove: 4
     foodNeeded: 50.0
   RABBIT:
+    icon: "🐇"
     weight: 2.0
     maxCount: 150
     maxMove: 2
     foodNeeded: 0.45
   MOUSE:
+    icon: "🐭"
     weight: 0.05
     maxCount: 500
     maxMove: 1
     foodNeeded: 0.01
   GOAT:
+    icon: "🐐"
     weight: 60.0
     maxCount: 140
     maxMove: 3
     foodNeeded: 10.0
   SHEEP:
+    icon: "🐑"
     weight: 70.0
     maxCount: 140
     maxMove: 3
     foodNeeded: 15.0
   BOAR:
+    icon: "🐗"
     weight: 400.0
     maxCount: 50
     maxMove: 2
     foodNeeded: 50.0
   BUFFALO:
+    icon: "🐃"
     weight: 700.0
     maxCount: 10
     maxMove: 3
     foodNeeded: 100.0
   DUCK:
+    icon: "🦆"
     weight: 1.0
     maxCount: 200
     maxMove: 4
     foodNeeded: 0.15
   CATERPILLAR:
+    icon: "🐛"
     weight: 0.01
     maxCount: 1000
     maxMove: 0
     foodNeeded: 0.0
   PLANT:
+    icon: "🌿"
     weight: 1.0
     maxCount: 200
     maxMove: 0
