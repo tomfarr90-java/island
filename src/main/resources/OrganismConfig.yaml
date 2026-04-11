@@ -1,0 +1,143 @@
+animalSettings:
+  WOLF:
+    weight: 50.0
+    maxCount: 30
+    maxMove: 3
+    foodNeeded: 8.0
+  BOA:
+    weight: 15.0
+    maxCount: 30
+    maxMove: 1
+    foodNeeded: 3.0
+  FOX:
+    weight: 8.0
+    maxCount: 30
+    maxMove: 2
+    foodNeeded: 2.0
+  BEAR:
+    weight: 500.0
+    maxCount: 5
+    maxMove: 2
+    foodNeeded: 80.0
+  EAGLE:
+    weight: 6.0
+    maxCount: 20
+    maxMove: 3
+    foodNeeded: 1.0
+  HORSE:
+    weight: 400.0
+    maxCount: 20
+    maxMove: 4
+    foodNeeded: 60.0
+  DEER:
+    weight: 300.0
+    maxCount: 20
+    maxMove: 4
+    foodNeeded: 50.0
+  RABBIT:
+    weight: 2.0
+    maxCount: 150
+    maxMove: 2
+    foodNeeded: 0.45
+  MOUSE:
+    weight: 0.05
+    maxCount: 500
+    maxMove: 1
+    foodNeeded: 0.01
+  GOAT:
+    weight: 60.0
+    maxCount: 140
+    maxMove: 3
+    foodNeeded: 10.0
+  SHEEP:
+    weight: 70.0
+    maxCount: 140
+    maxMove: 3
+    foodNeeded: 15.0
+  BOAR:
+    weight: 400.0
+    maxCount: 50
+    maxMove: 2
+    foodNeeded: 50.0
+  BUFFALO:
+    weight: 700.0
+    maxCount: 10
+    maxMove: 3
+    foodNeeded: 100.0
+  DUCK:
+    weight: 1.0
+    maxCount: 200
+    maxMove: 4
+    foodNeeded: 0.15
+  CATERPILLAR:
+    weight: 0.01
+    maxCount: 1000
+    maxMove: 0
+    foodNeeded: 0.0
+  PLANT:
+    weight: 1.0
+    maxCount: 200
+    maxMove: 0
+    foodNeeded: 0.0
+
+eatingProbabilities:
+  WOLF:
+    HORSE: 10
+    DEER: 15
+    RABBIT: 60
+    MOUSE: 80
+    GOAT: 60
+    SHEEP: 70
+    BOAR: 15
+    BUFFALO: 10
+    DUCK: 40
+  BOA:
+    FOX: 15
+    RABBIT: 20
+    MOUSE: 40
+    DUCK: 10
+  FOX:
+    RABBIT: 70
+    MOUSE: 90
+    DUCK: 60
+    CATERPILLAR: 40
+  BEAR:
+    BOA: 80
+    HORSE: 40
+    DEER: 80
+    RABBIT: 80
+    MOUSE: 90
+    GOAT: 70
+    SHEEP: 70
+    BOAR: 50
+    BUFFALO: 20
+    DUCK: 10
+  EAGLE:
+    FOX: 10
+    MOUSE: 90
+    RABBIT: 90
+    DUCK: 80
+  HORSE:
+    PLANT: 100
+  DEER:
+    PLANT: 100
+  RABBIT:
+    PLANT: 100
+  MOUSE:
+    CATERPILLAR: 90
+    PLANT: 100
+  GOAT:
+    PLANT: 100
+  SHEEP:
+    PLANT: 100
+  BOAR:
+    MOUSE: 50
+    CATERPILLAR: 90
+    PLANT: 100
+  BUFFALO:
+    PLANT: 100
+  DUCK:
+    CATERPILLAR: 90
+    PLANT: 100
+  CATERPILLAR:
+    PLANT: 100
