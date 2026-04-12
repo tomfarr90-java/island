@@ -1,7 +1,9 @@
 package ru.javarush.entity.animal.herbivore;
 
+import ru.javarush.dto.AnimalStats;
+
 public class Caterpillar extends Herbivore {
-    public Caterpillar(String icon, double startWeight) {
-        super("CATERPILLAR", icon, startWeight);
+    public Caterpillar(AnimalStats stats) {
+        super("Caterpillar", stats);
     }
 }

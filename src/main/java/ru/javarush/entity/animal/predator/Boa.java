@@ -1,7 +1,9 @@
 package ru.javarush.entity.animal.predator;
 
+import ru.javarush.dto.AnimalStats;
+
 public class Boa extends Predator{
-    public Boa(String icon, double startWeight) {
-        super("BOA", icon, startWeight);
+    public Boa(AnimalStats stats) {
+        super("Boa", stats);
     }
 }

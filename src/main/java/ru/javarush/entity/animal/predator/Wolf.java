@@ -1,7 +1,9 @@
 package ru.javarush.entity.animal.predator;
 
+import ru.javarush.dto.AnimalStats;
+
 public class Wolf extends Predator{
-    public Wolf(String icon, double startWeight) {
-        super("WOLF", icon, startWeight);
+    public Wolf(AnimalStats stats) {
+        super("Wolf", stats);
     }
 }

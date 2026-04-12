@@ -1,15 +1,10 @@
 package ru.javarush.entity.animal.predator;
 
+import ru.javarush.dto.AnimalStats;
 import ru.javarush.entity.animal.Animal;
 
-public class Predator extends Animal {
-
-    public Predator(String type, String icon, double startWeight) {
-        super(type, icon, startWeight);
-    }
-
-    @Override
-    public void eat(Object food) {
-
+public abstract class Predator extends Animal {
+    public Predator(String type, AnimalStats stats) {
+        super(type, stats);
     }
 }

@@ -1,7 +1,9 @@
 package ru.javarush.entity.animal.herbivore;
 
+import ru.javarush.dto.AnimalStats;
+
 public class Deer extends Herbivore {
-    public Deer(String icon, double startWeight) {
-        super("DEER", icon, startWeight);
+    public Deer(AnimalStats stats) {
+        super("Deer", stats);
     }
 }

@@ -1,16 +1,10 @@
 package ru.javarush.entity.animal.herbivore;
 
+import ru.javarush.dto.AnimalStats;
 import ru.javarush.entity.animal.Animal;
 
-public class Herbivore extends Animal {
-    public Herbivore(String type, String icon, double startWeight) {
-        super(type, icon, startWeight);
+public abstract class Herbivore extends Animal {
+    public Herbivore(String type, AnimalStats stats) {
+        super(type, stats);
     }
-
-    @Override
-    public void eat(Object food) {
-
-    }
-
-
 }
