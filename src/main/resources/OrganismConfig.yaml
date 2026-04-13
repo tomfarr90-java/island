@@ -1,4 +1,4 @@
-animalSettings:
+organismSettings:
   WOLF:
     icon: "🐺"
     weight: 50.0

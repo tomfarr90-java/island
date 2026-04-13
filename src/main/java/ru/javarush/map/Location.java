@@ -21,14 +21,14 @@ public class Location {
         this.y = y;
     }
 
-    public void addOrganism(Organism organism) {
+    public synchronized void addOrganism(Organism organism) {
         OrganismStats organismStats = ConfigRepository.getStatsFor(organism.getType());
         if (organism.countIn(this) < organismStats.getMaxCount()) {
             organism.addTo(this);
         }
     }
 
-    public void removeOrganism(Organism organism) {
+    public synchronized void removeOrganism(Organism organism) {
         organism.removeFrom(this);
     }
 

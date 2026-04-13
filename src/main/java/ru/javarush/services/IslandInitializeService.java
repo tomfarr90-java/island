@@ -3,6 +3,7 @@ package ru.javarush.services;
 import ru.javarush.entity.animal.herbivore.Sheep;
 import ru.javarush.entity.animal.predator.Wolf;
 import ru.javarush.entity.plant.Plant;
+import ru.javarush.factory.EntityFactory;
 import ru.javarush.map.Island;
 import ru.javarush.map.Location;
 import ru.javarush.repository.ConfigRepository;
@@ -17,33 +18,36 @@ public class IslandInitializeService {
     }
 
     public void initialize() {
+        var allTypes = ConfigRepository.getAllTypes();
         for (int x = 0; x < island.getWidth(); x++) {
             for (int y = 0; y < island.getHeight(); y++) {
                 Location location = island.getLocation(x, y);
-                seedAnimals(location, "WOLF");
-                seedAnimals(location, "SHEEP");
 
-                seedPlants(location);
+                for (String type : allTypes) {
+                    if (type.equals("PLANT")) {
+                        seedPlants(location);
+                    } else {
+                        seedAnimals(location, type);
+                    }
+                }
             }
         }
     }
 
     private void seedAnimals(Location location, String type) {
         var stats = ConfigRepository.getStatsFor(type);
-
-        int count = ThreadLocalRandom.current().nextInt(stats.getMaxCount() / 2);
+        int maxPossible = Math.max(stats.getMaxCount() / 10, 2);
+        int count = ThreadLocalRandom.current().nextInt(maxPossible);
         for (int i = 0; i < count; i++) {
-
-            if (type.equals("WOLF")) location.addOrganism(new Wolf(stats));
-            if (type.equals("SHEEP")) location.addOrganism(new Sheep(stats));
+            location.addOrganism(EntityFactory.createAnimal(type));
         }
     }
 
     private void seedPlants(Location location) {
         var stats = ConfigRepository.getStatsFor("PLANT");
-        int count = ThreadLocalRandom.current().nextInt(stats.getMaxCount());
+        int count = ThreadLocalRandom.current().nextInt(stats.getMaxCount() / 4 + 1);
         for (int i = 0; i < count; i++) {
-            location.addOrganism(new Plant(stats));
+            location.addOrganism(EntityFactory.createPlant());
         }
     }
 }

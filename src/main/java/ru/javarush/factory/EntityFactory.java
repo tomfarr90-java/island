@@ -1,10 +1,11 @@
-package ru.javarush.repository;
+package ru.javarush.factory;
 
 import ru.javarush.dto.OrganismStats;
 import ru.javarush.entity.animal.Animal;
 import ru.javarush.entity.animal.herbivore.*;
 import ru.javarush.entity.animal.predator.*;
 import ru.javarush.entity.plant.Plant;
+import ru.javarush.repository.ConfigRepository;
 
 public class EntityFactory {
 
@@ -13,8 +14,6 @@ public class EntityFactory {
         if (stats == null) {
             throw new RuntimeException("Статистика для типа " + type + " не найдена!");
         }
-        String icon = stats.getIcon();
-        double weight = stats.getWeight();
         return switch (type.toUpperCase()) {
             case "WOLF"-> new Wolf(stats);
             case "BEAR" -> new Bear(stats);
