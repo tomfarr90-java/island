@@ -1,8 +1,6 @@
 package ru.javarush.services;
 
-import ru.javarush.entity.animal.herbivore.Sheep;
-import ru.javarush.entity.animal.predator.Wolf;
-import ru.javarush.entity.plant.Plant;
+
 import ru.javarush.factory.EntityFactory;
 import ru.javarush.map.Island;
 import ru.javarush.map.Location;
