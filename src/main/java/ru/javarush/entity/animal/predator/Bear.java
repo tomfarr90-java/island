@@ -1,9 +1,9 @@
 package ru.javarush.entity.animal.predator;
 
-import ru.javarush.dto.AnimalStats;
+import ru.javarush.dto.OrganismStats;
 
 public class Bear extends Predator{
-    public Bear(AnimalStats stats) {
-        super("Bear", stats);
+    public Bear(OrganismStats stats) {
+        super("BEAR", stats);
     }
 }

@@ -2,7 +2,7 @@ package ru.javarush.dto;
 
 import java.util.Map;
 
-public class AnimalStats {
+public class OrganismStats {
     private String icon;
     private double weight;
     private int maxCount;
@@ -10,7 +10,7 @@ public class AnimalStats {
     private double foodNeeded;
     private Map<String, Integer> chanceEat;
 
-    public AnimalStats() {
+    public OrganismStats() {
     }
 
     public String getIcon() {

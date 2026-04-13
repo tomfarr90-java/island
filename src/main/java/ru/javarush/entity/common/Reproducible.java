@@ -5,5 +5,5 @@ import ru.javarush.map.Location;
 
 public interface Reproducible {
 
-    Animal reproduce(Location currentLocation);
+    void reproduce(Location currentLocation);
 }

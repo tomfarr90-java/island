@@ -1,9 +1,9 @@
 package ru.javarush.entity.animal.predator;
 
-import ru.javarush.dto.AnimalStats;
+import ru.javarush.dto.OrganismStats;
 
 public class Fox extends Predator{
-    public Fox(AnimalStats stats) {
-        super("Fox", stats);
+    public Fox(OrganismStats stats) {
+        super("FOX", stats);
     }
 }

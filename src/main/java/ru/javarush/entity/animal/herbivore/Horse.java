@@ -1,10 +1,9 @@
 package ru.javarush.entity.animal.herbivore;
 
-import ru.javarush.dto.AnimalStats;
-import ru.javarush.entity.animal.Animal;
+import ru.javarush.dto.OrganismStats;
 
 public class Horse extends Herbivore {
-    public Horse(AnimalStats stats) {
-        super("Horse", stats);
+    public Horse(OrganismStats stats) {
+        super("HORSE", stats);
     }
 }

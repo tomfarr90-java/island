@@ -1,9 +1,9 @@
 package ru.javarush.entity.animal.herbivore;
 
-import ru.javarush.dto.AnimalStats;
+import ru.javarush.dto.OrganismStats;
 
 public class Mouse extends Herbivore {
-    public Mouse(AnimalStats stats) {
-        super("Mouse", stats);
+    public Mouse(OrganismStats stats) {
+        super("MOUSE", stats);
     }
 }

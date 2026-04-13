@@ -1,7 +1,10 @@
 package ru.javarush.map;
 
+import ru.javarush.dto.OrganismStats;
+import ru.javarush.entity.Organism;
 import ru.javarush.entity.animal.Animal;
 import ru.javarush.entity.plant.Plant;
+import ru.javarush.repository.ConfigRepository;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -18,6 +21,23 @@ public class Location {
         this.y = y;
     }
 
+    public void addOrganism(Organism organism) {
+        OrganismStats organismStats = ConfigRepository.getStatsFor(organism.getType());
+        if (organism.countIn(this) < organismStats.getMaxCount()) {
+            organism.addTo(this);
+        }
+    }
+
+    public void removeOrganism(Organism organism) {
+        organism.removeFrom(this);
+    }
+
+    public int getX() {
+        return x;
+    }
+    public int getY() {
+        return y;
+    }
     public List<Animal> getAnimals() {
         return animals;
     }
@@ -25,11 +45,5 @@ public class Location {
         return plants;
     }
 
-    public void addAnimal (Animal animal) {
-
     }
-    public void removeAnimal(Animal animal){}
-    public void addPlant(Plant plant) {
 
-    }
-}

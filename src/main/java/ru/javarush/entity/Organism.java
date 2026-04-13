@@ -1,5 +1,7 @@
 package ru.javarush.entity;
 
+import ru.javarush.map.Location;
+
 public abstract class Organism {
     private final String type;
     private final String icon;
@@ -13,6 +15,10 @@ public abstract class Organism {
         this.baseWeight = baseWeight;
         this.currentWeight = baseWeight;
     }
+
+    public abstract void addTo(Location location);
+    public abstract void removeFrom(Location location);
+    public abstract long countIn(Location location);
 
     public double getBaseWeight() {
         return baseWeight;
